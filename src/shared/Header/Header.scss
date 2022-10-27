@@ -4,17 +4,15 @@
 
   .header-top {
     text-align: center;
-    padding: 15px 0;
+    padding: 18px 0;
     color: #fff;
-    background-color: #000;
-    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.822);
+    font-size: 12px;
     font-weight: 700;
-    @media (max-width: 740px) {
-      font-size: 12px;
-    }
+    height: 50px;
   }
 
-  .header-real{
+  .header-real {
     display: flex;
     height: 80px;
     padding: 0 2%;
@@ -22,36 +20,42 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgb(234, 234, 234);
-    .logo{
+    .logo {
       font-size: 24px;
       font-weight: 700;
       color: rgb(159, 0, 0);
       text-transform: uppercase;
     }
-    .search{
+    .search {
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: rgb(234, 234, 234);
       padding: 5px 10px;
-      input{
+      @media (max-width: 780px) {
+        display: none;
+      }
+      input {
         border: none;
         background-color: rgb(234, 234, 234);
         min-width: 350px;
-        
       }
     }
-    .icon-boxes{
+    .icon-boxes {
       display: flex;
-      .box{
+      .box {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 5px;
-        img{}
-        span{
+        img {
+        }
+        span {
           font-size: 12px;
           font-weight: 500;
+          @media (max-width: 780px) {
+            display: none;
+          }
         }
       }
     }
@@ -62,12 +66,14 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    height: 36px;
+    padding: 0;
     .nav-link {
       list-style: none;
       &:first-child {
         a {
           color: red;
-          &:hover{
+          &:hover {
             color: #000;
           }
         }
@@ -85,7 +91,7 @@
     .mega-link {
       a {
         &:hover {
-          background-color: rgb(234, 234, 234);
+          background-color: rgb(245, 245, 245);
           border-bottom: #000 solid 2px;
         }
       }
