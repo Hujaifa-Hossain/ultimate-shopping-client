@@ -8,3 +8,18 @@
     outline: none;
   }
 }
+
+.slick-prev{
+  left: 20px;
+  z-index: 1;
+  &::before{
+    color: gray;
+  }
+}
+
+.slick-next{
+  right: 20px;
+  &::before{
+    color: gray;
+  }
+}

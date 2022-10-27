@@ -1,10 +1,10 @@
+import Slider from "react-slick";
+import './Header.scss';
 import { Link } from 'react-router-dom';
 import { BiSearchAlt } from 'react-icons/bi';
 import { AiOutlineGift } from 'react-icons/ai';
 import { FiMapPin } from 'react-icons/fi';
 import { HiOutlineUser, HiOutlineShoppingBag } from 'react-icons/hi';
-import Slider from "react-slick";
-import './Header.scss';
 
 const Header = () => {
 
@@ -16,7 +16,7 @@ const Header = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
-    cssEase: "linear"
+    cssEase: "linear",
   };
 
   const offers = ['SALE: UP TO 50% OFF ON SELECTED STYLES', 'ENJOY FREE DELIVERY ON ALL ORDERS', 'GET APEX GIFT VOUCHER AT FLAT 25% OFF']
@@ -25,7 +25,7 @@ const Header = () => {
     <nav className='header'>
       {/* header top */}
       <Slider {...settings} className='header-top'>
-        {offers.map(offer => <p>{offer}</p>)}
+        {offers.map((offer, i) => <p key={i}>{offer}</p>)}
       </Slider>
 
       {/* real header  */}
