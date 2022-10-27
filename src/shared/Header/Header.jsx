@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import { BiSearchAlt } from 'react-icons/bi';
+import { AiOutlineGift } from 'react-icons/ai';
+import { FiMapPin } from 'react-icons/fi';
+import { HiOutlineUser, HiOutlineShoppingBag } from 'react-icons/hi';
 import Slider from "react-slick";
 import './Header.scss';
 
@@ -35,22 +38,22 @@ const Header = () => {
           <BiSearchAlt />
         </div>
         <div className="icon-boxes">
-          <div className="box">
-            <img src="" alt="f" />
+          <Link to='/' className="box">
+            <AiOutlineGift className='icon'/>
             <span>Ultimate Rewards</span>
-          </div>
-          <div className="box">
-            <img src="" alt="f" />
+          </Link>
+          <Link to='/' className="box">
+          <FiMapPin className='icon'/>
             <span>Store Locations</span>
-          </div>
-          <div className="box">
-            <img src="" alt="f" />
+          </Link>
+          <Link to='/' className="box">
+            <HiOutlineUser className='icon'/>
             <span>Login/Register</span>
-          </div>
-          <div className="box">
-            <img src="" alt="f" />
+          </Link>
+          <Link to='/' className="box">
+            <HiOutlineShoppingBag className='icon'/>
             <span>Bag</span>
-          </div>
+          </Link>
         </div>
       </div>
 
@@ -61,7 +64,7 @@ const Header = () => {
         <li className='nav-link mega-link'><Link to='/women'>Women</Link></li>
         <li className='nav-link mega-link'><Link to='/kids'>Kids</Link></li>
         <li className='nav-link'><Link to='/gift'>Gift Voucher</Link></li>
-        <li className='nav-link'><Link to='/exclusive'>Online Exclusive</Link></li>
+        {/* <li className='nav-link'><Link to='/exclusive'>Online Exclusive</Link></li> */}
       </ul>
 
     </nav>
