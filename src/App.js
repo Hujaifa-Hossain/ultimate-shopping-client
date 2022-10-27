@@ -20,6 +20,7 @@ const App = () => {
     {
       path: "/",
       element: <LayOut />,
+      errorElement: <NotFound/>,
       children: [
         {
           path: "/",

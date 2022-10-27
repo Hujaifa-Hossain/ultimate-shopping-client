@@ -18,14 +18,10 @@ const Header = () => {
   const offers = ['SALE: UP TO 50% OFF ON SELECTED STYLES', 'ENJOY FREE DELIVERY ON ALL ORDERS', 'GET APEX GIFT VOUCHER AT FLAT 25% OFF']
 
   return (
-    <div>
-
-
+    <nav className='header'>
       <Slider {...settings} className='header-top'>
         {offers.map(offer => <p>{offer}</p>)}
       </Slider>
-
-
 
       {/* <div className="logo">
         <Link to='/'>LOGO</Link>
@@ -34,7 +30,17 @@ const Header = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
       </ul> */}
-    </div>
+
+      <ul className="mega-menu">
+        <li className='nav-link'><Link to='/'>Sale</Link></li>
+        <li className='nav-link mega-link'><Link to='/men'>Men</Link></li>
+        <li className='nav-link mega-link'><Link to='/women'>Women</Link></li>
+        <li className='nav-link mega-link'><Link to='/kids'>Kids</Link></li>
+        <li className='nav-link'><Link to='/gift'>Gift Voucher</Link></li>
+        <li className='nav-link'><Link to='/exclusive'>Online Exclusive</Link></li>
+      </ul>
+
+    </nav>
   );
 };
 
