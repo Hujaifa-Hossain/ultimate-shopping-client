@@ -1,6 +1,7 @@
 .header {
   position: sticky;
   top: 0;
+
   .header-top {
     text-align: center;
     padding: 15px 0;
@@ -12,6 +13,50 @@
       font-size: 12px;
     }
   }
+
+  .header-real{
+    display: flex;
+    height: 80px;
+    padding: 0 2%;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(234, 234, 234);
+    .logo{
+      font-size: 24px;
+      font-weight: 700;
+      color: rgb(159, 0, 0);
+      text-transform: uppercase;
+    }
+    .search{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(234, 234, 234);
+      padding: 5px 10px;
+      input{
+        border: none;
+        background-color: rgb(234, 234, 234);
+        min-width: 350px;
+        
+      }
+    }
+    .icon-boxes{
+      display: flex;
+      .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        img{}
+        span{
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
   .mega-menu {
     display: flex;
     justify-content: center;

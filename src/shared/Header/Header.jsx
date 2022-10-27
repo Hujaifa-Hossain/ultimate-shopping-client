@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { BiSearchAlt } from 'react-icons/bi';
 import Slider from "react-slick";
 import './Header.scss';
 
@@ -19,18 +20,41 @@ const Header = () => {
 
   return (
     <nav className='header'>
+      {/* header top */}
       <Slider {...settings} className='header-top'>
         {offers.map(offer => <p>{offer}</p>)}
       </Slider>
 
-      {/* <div className="logo">
-        <Link to='/'>LOGO</Link>
+      {/* real header  */}
+      <div className="header-real">
+        <div className="logo">
+          Ultimate Shopping
+        </div>
+        <div className="search">
+          <input type="text" />
+          <BiSearchAlt />
+        </div>
+        <div className="icon-boxes">
+          <div className="box">
+            <img src="" alt="f" />
+            <span>Ultimate Rewards</span>
+          </div>
+          <div className="box">
+            <img src="" alt="f" />
+            <span>Store Locations</span>
+          </div>
+          <div className="box">
+            <img src="" alt="f" />
+            <span>Login/Register</span>
+          </div>
+          <div className="box">
+            <img src="" alt="f" />
+            <span>Bag</span>
+          </div>
+        </div>
       </div>
-      <ul className="menu">
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/about'>About</Link></li>
-      </ul> */}
 
+      {/* mega menu  */}
       <ul className="mega-menu">
         <li className='nav-link'><Link to='/'>Sale</Link></li>
         <li className='nav-link mega-link'><Link to='/men'>Men</Link></li>
