@@ -22,8 +22,8 @@
     border-bottom: 1px solid rgb(234, 234, 234);
     
     .logo {
-      font-size: 24px;
-      font-weight: 700;
+      font-size: 20px;
+      font-weight: 600;
       color: rgb(159, 0, 0);
       text-transform: uppercase;
       flex: 1;
@@ -48,9 +48,7 @@
       display: flex;
       justify-content: center;
       flex: 1;
-      @media (max-width: 780px) {
-        justify-content: flex-end;
-      }
+      justify-content: flex-end;
       .box {
         display: flex;
         flex-direction: column;

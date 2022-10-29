@@ -31,7 +31,7 @@ const Header = () => {
       {/* real header  */}
       <div className="header-real">
         <div className="logo">
-          Ultimate Shopping
+          Shopkeeper
         </div>
         <div className="search">
           <input type="text" />
