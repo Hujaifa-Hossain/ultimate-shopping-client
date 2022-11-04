@@ -35,7 +35,7 @@ const Header = () => {
         </div>
         <div className="search">
           <input type="text" />
-          <BiSearchAlt />
+          <BiSearchAlt className="icon" />
         </div>
         <div className="icon-boxes">
           <Link to='/' className="box">
