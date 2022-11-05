@@ -12,8 +12,8 @@ const Home = () => {
     arrows: true,
   };
   return (
-    <div>
-      <Slider {...settings} className='home'>
+    <div className='home'>
+      <Slider {...settings} className='home-banner'>
         <div>
           <img src="https://storage.sg.content-cdn.io/in-resources/25c7d1c6-73be-4ff9-b000-0bf110b5c461/Images/userimages/banners/oct2022/fashion_week_hm_d2210.jpg" alt="" />
         </div>
@@ -24,7 +24,19 @@ const Home = () => {
           <img src="https://storage.sg.content-cdn.io/in-resources/25c7d1c6-73be-4ff9-b000-0bf110b5c461/Images/userimages/banners/oct2022/home_banr_03_d2010.jpg" alt="" />
         </div>
       </Slider>
-      <Products/>
+      <Products />
+
+      <section className='fashion-grid'>
+        <div className='fashion-child'>Big welcome</div>
+        <div className='fashion-child'>
+          <div>hi</div>
+          <div className='item'>
+            <div>hello</div>
+            <div>yes</div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };
