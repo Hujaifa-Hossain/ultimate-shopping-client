@@ -31,7 +31,7 @@ const Header = () => {
       {/* real header  */}
       <div className="header-real">
         <div className="logo">
-          Shopkeeper
+          ShopKeeper
         </div>
         <div className="search">
           <input type="text" />
@@ -39,19 +39,19 @@ const Header = () => {
         </div>
         <div className="icon-boxes">
           <Link to='/' className="box">
-            <AiOutlineGift className='icon'/>
+            <AiOutlineGift className='icon' />
             <span>Ultimate Rewards</span>
           </Link>
           <Link to='/' className="box">
-          <FiMapPin className='icon'/>
+            <FiMapPin className='icon' />
             <span>Store Locations</span>
           </Link>
           <Link to='/' className="box">
-            <HiOutlineUser className='icon'/>
+            <HiOutlineUser className='icon' />
             <span>Login/Register</span>
           </Link>
           <Link to='/' className="box">
-            <HiOutlineShoppingBag className='icon'/>
+            <HiOutlineShoppingBag className='icon' />
             <span>Bag</span>
           </Link>
         </div>
