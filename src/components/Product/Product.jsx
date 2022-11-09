@@ -1,10 +1,11 @@
 import './Product.scss';
 
 const Product = ({ product }) => {
-  const { title, description, image } = product;
+  const { name, description, image } = product;
   return (
     <div className='product'>
-      Product
+      <h4>{name}</h4>
+      <p>{description}</p>
     </div>
   );
 };
