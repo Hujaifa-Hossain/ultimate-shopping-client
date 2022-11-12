@@ -8,17 +8,38 @@
       height: 400px;
     }
   }
+  
   .fashion-grid{
     display: flex;
+    gap: 10px;
+    margin: 50px 30px;
     @media (max-width: 780px) {
       flex-direction: column;
     }
-    .fashion-child{
+
+    .left{
       flex: 1;
+      img{
+        height: 507px;
+        width: 100%;
+      }
+    }
+
+    .right{
+      flex: 1;
+      img{
+        height: 250px;
+        width: 100%;
+      }
       .item{
         display: flex;
+        gap: 5px;
         div{
           flex: 1;
+          img{
+            height: 250px;
+            width: 100%;
+          }
         }
       }
     }

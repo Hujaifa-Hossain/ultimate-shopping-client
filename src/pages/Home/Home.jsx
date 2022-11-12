@@ -3,6 +3,11 @@ import Slider from "react-slick";
 import Products from '../../components/Products/Products';
 import Categories from '../../components/Categories/Categories';
 
+import shoe4 from '../../assets/shoes/shoe4.jpg';
+import shoe5 from '../../assets/shoes/shoe5.jpg';
+import shoe8 from '../../assets/shoes/shoe8.jpg';
+import shoe7 from '../../assets/shoes/shoe7.jpg';
+
 const Home = () => {
   const settings = {
     dots: true,
@@ -29,12 +34,14 @@ const Home = () => {
       <Products />
 
       <section className='fashion-grid'>
-        <div className='fashion-child'>Big welcome</div>
-        <div className='fashion-child'>
-          <div>hi</div>
+        <div className='left'>
+          <img src={shoe4} alt="" />
+        </div>
+        <div className='right'>
+          <div><img src={shoe8} alt="" /></div>
           <div className='item'>
-            <div>hello</div>
-            <div>yes</div>
+            <div><img src={shoe5} alt="" /></div>
+            <div><img src={shoe7} alt="" /></div>
           </div>
         </div>
       </section>

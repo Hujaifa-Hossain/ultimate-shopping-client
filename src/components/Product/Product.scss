@@ -1,10 +1,26 @@
 .product{
-  padding: 10px;
+  // padding: 5px;
   background-color: rgb(0, 0, 0);
   color: white;
-  height: 300px;
+  height: 370px;
   text-align: center;
   margin: 0 10px;
   display: block;
   text-decoration: none;
+
+  img{
+    height: 300px;
+    width: 100%;
+  }
+
+  .info{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+    .icons{
+      font-size: 30px;
+    }
+  }
 }

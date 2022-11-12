@@ -15,7 +15,7 @@ const Products = () => {
 
   const sliderRef = useRef(null);
 
-  
+
 
   const settings = {
     dots: false,
@@ -80,7 +80,7 @@ const Products = () => {
   // ]
   return (
 
-   
+
 
 
     <div>
