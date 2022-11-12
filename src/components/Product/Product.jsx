@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import './Product.scss';
 
 const Product = ({ product }) => {
-  const { name, description, image } = product;
+  const { _id, name, description, image } = product;
   return (
-    <div className='product'>
+    <Link to={`/products/${_id}`} className='product'>
       <h4>{name}</h4>
       <p>{description}</p>
-    </div>
+    </Link>
   );
 };
 

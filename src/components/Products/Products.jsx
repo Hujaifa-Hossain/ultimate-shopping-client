@@ -8,18 +8,14 @@ import Loading from '../../shared/Loading/Loading';
 
 const Products = () => {
 
-  const { data: products, isLoading } = useQuery(['product'], () => fetch('http://localhost:8080/api/product', {
+  const { data: products, isLoading } = useQuery(['products'], () => fetch('http://localhost:8080/api/product', {
     method: 'GET',
   }).then(res => res.json()));
 
 
   const sliderRef = useRef(null);
 
-  if (isLoading) {
-    return <Loading />
-  } else {
-    console.log(products);
-  }
+  
 
   const settings = {
     dots: false,
@@ -41,7 +37,7 @@ const Products = () => {
         breakpoint: 780,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
+          slidesToScroll: 2
         }
       },
       {
@@ -83,6 +79,10 @@ const Products = () => {
   //   },
   // ]
   return (
+
+   
+
+
     <div>
       <div
         style={{
@@ -150,7 +150,6 @@ const Products = () => {
         </Slider>
       </div>
     </div>
-
 
 
   );

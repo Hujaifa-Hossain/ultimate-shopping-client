@@ -30,9 +30,9 @@ const Header = () => {
 
       {/* real header  */}
       <div className="header-real">
-        <div className="logo">
+        <Link to='/' className="logo">
           ShopKeeper
-        </div>
+        </Link>
         <div className="search">
           <input type="text" />
           <BiSearchAlt className="icon" />
@@ -62,6 +62,8 @@ const Header = () => {
         <li className='nav-link'><Link to='/'>Sale</Link></li>
         <li className='nav-link mega-link'><Link to='/men'>Men</Link></li>
         <li className='nav-link mega-link'><Link to='/women'>Women</Link></li>
+
+
         <li className='nav-link mega-link'><Link to='/kids'>Kids</Link></li>
         <li className='nav-link'><Link to='/gift'>Gift Voucher</Link></li>
         {/* <li className='nav-link'><Link to='/exclusive'>Online Exclusive</Link></li> */}

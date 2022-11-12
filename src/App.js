@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Footer from "./shared/Footer/Footer";
@@ -20,11 +21,15 @@ const App = () => {
     {
       path: "/",
       element: <LayOut />,
-      errorElement: <NotFound/>,
+      errorElement: <NotFound />,
       children: [
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "products/:productId",
+          element: <ProductDetails />,
         },
         {
           path: "/about",

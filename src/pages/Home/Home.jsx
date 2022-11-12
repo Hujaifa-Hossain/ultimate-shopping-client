@@ -1,6 +1,7 @@
 import './Home.scss';
 import Slider from "react-slick";
 import Products from '../../components/Products/Products';
+import Categories from '../../components/Categories/Categories';
 
 const Home = () => {
   const settings = {
@@ -24,6 +25,7 @@ const Home = () => {
           <img src="https://storage.sg.content-cdn.io/in-resources/25c7d1c6-73be-4ff9-b000-0bf110b5c461/Images/userimages/banners/oct2022/home_banr_03_d2010.jpg" alt="" />
         </div>
       </Slider>
+      <Categories/>
       <Products />
 
       <section className='fashion-grid'>
