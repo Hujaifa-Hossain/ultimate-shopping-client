@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { BiSearchAlt } from 'react-icons/bi';
 import { AiOutlineGift } from 'react-icons/ai';
 import { FiMapPin } from 'react-icons/fi';
-import { HiOutlineUser, HiOutlineShoppingBag } from 'react-icons/hi';
+import { HiOutlineUser } from 'react-icons/hi';
+import { BsHandbag } from 'react-icons/bs';
 
 const Header = () => {
 
@@ -51,7 +52,8 @@ const Header = () => {
             <span>Login/Register</span>
           </Link>
           <Link to='/' className="box">
-            <HiOutlineShoppingBag className='icon' />
+            <BsHandbag className='icon' />
+            <p className="label">0</p>
             <span>Bag</span>
           </Link>
         </div>

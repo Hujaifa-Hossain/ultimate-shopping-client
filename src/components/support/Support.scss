@@ -1,0 +1,28 @@
+.support{
+  margin: 50px auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+
+  @media (max-width: 780px) {
+    width: 95%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .support-box{
+    text-align: center;
+    .icon{
+      height: 50px;
+      width: 50px;
+    }
+    p{
+      font-weight: 14px;
+      margin-top: 10px;
+    }
+    a{
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+  }
+}

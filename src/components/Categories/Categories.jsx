@@ -13,14 +13,14 @@ import shoe8 from '../../assets/shoes/shoe8.jpg';
 const Categories = () => {
 
   const categories = [
-    { id: 1, link: '', img: shoe1 },
-    { id: 2, link: '', img: shoe2 },
-    { id: 3, link: '', img: shoe3 },
-    { id: 4, link: '', img: shoe4 },
-    { id: 5, link: '', img: shoe5 },
-    { id: 6, link: '', img: shoe6 },
-    { id: 7, link: '', img: shoe7 },
-    { id: 8, link: '', img: shoe8 },
+    { id: 1, link: 'products', img: shoe1 },
+    { id: 2, link: 'products', img: shoe2 },
+    { id: 3, link: 'products', img: shoe3 },
+    { id: 5, link: 'products', img: shoe5 },
+    { id: 4, link: 'products', img: shoe4 },
+    { id: 6, link: 'products', img: shoe6 },
+    { id: 7, link: 'products', img: shoe7 },
+    { id: 8, link: 'products', img: shoe8 },
   ]
 
   return (

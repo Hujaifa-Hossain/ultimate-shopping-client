@@ -12,6 +12,8 @@ const Products = () => {
     method: 'GET',
   }).then(res => res.json()));
 
+  console.log(products);
+
 
   const sliderRef = useRef(null);
 
@@ -79,20 +81,17 @@ const Products = () => {
   //   },
   // ]
   return (
-
-
-
-
-    <div>
+    <div className='products'>
       <div
         style={{
           display: "flex",
           flexFlow: 'end',
-          justifyContent: "end",
-          padding: "20px",
+          justifyContent: "space-between",
+          padding: "10px",
           marginTop: '10px',
         }}
       >
+        <h4>What's New</h4>
         <div style={{ display: "flex" }}>
           <button
             style={{
@@ -129,7 +128,7 @@ const Products = () => {
           </button>
         </div>
       </div>
-      <div style={{ margin: 10 }}>
+      <div>
         <Slider {...settings}
           ref={sliderRef}
           arrows={false}
@@ -139,14 +138,14 @@ const Products = () => {
                 position: "absolute",
                 width: "100%",
                 top: "-10px",
-                opacity: 0,
+                // opacity: 0,
               }}
             >
               {i}
             </div>
           )}
         >
-          {products?.map((product, _id) => <Product key={_id} product={product} />)}
+          {products?.slice(1, 8).map((product, _id) => <Product key={_id} product={product} />)}
         </Slider>
       </div>
     </div>

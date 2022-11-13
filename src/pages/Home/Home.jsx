@@ -7,6 +7,7 @@ import shoe4 from '../../assets/shoes/shoe4.jpg';
 import shoe5 from '../../assets/shoes/shoe5.jpg';
 import shoe8 from '../../assets/shoes/shoe8.jpg';
 import shoe7 from '../../assets/shoes/shoe7.jpg';
+import Support from '../../components/support/Support';
 
 const Home = () => {
   const settings = {
@@ -45,6 +46,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Support/>
 
     </div>
   );

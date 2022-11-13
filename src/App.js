@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
+import ProductsList from "./components/ProductsList/ProductsList";
 import About from "./pages/About/About";
 import Home from "./pages/Home/Home";
 import Footer from "./shared/Footer/Footer";
@@ -28,12 +29,12 @@ const App = () => {
           element: <Home />,
         },
         {
-          path: "products/:productId",
-          element: <ProductDetails />,
+          path: "/products",
+          element: <ProductsList />,
         },
         {
-          path: "/about",
-          element: <About />,
+          path: "products/:productId",
+          element: <ProductDetails />,
         },
       ],
     },

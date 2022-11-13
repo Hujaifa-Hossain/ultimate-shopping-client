@@ -1,26 +1,28 @@
 import './Product.scss';
 import { Link } from 'react-router-dom';
 import { AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
+import {RiShoppingCartLine } from 'react-icons/ri';
 import shoe1 from '../../assets/shoes/shoe4.jpg';
 
-// style={{backgroundImage: `url(${shoe1})`}}
-
 const Product = ({ product }) => {
-  const { _id, name, description, image } = product;
+  const { _id, name, price, image } = product;
   return (
-    <Link to={`/products/${_id}`} className='product' >
+    <div className='product'>
 
-      <img src={shoe1} alt="" />
+      <Link to={`/products/${_id}`}>
+        <img src={shoe1} alt="" />
+      </Link>
 
-      {/* <p>{description}</p> */}
       <div className='info'>
-        <h4>{name}</h4>
+        <h5>{name}</h5>
         <div className="icons">
-          <AiOutlineHeart />
-          <AiOutlineShoppingCart />
+          <RiShoppingCartLine/>
+        <h5>${price}</h5>
+          {/* <AiOutlineHeart /> */}
+          {/* <AiOutlineShoppingCart /> */}
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
