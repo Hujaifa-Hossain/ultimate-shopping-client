@@ -47,7 +47,7 @@ const Header = () => {
             <FiMapPin className='icon' />
             <span>Store Locations</span>
           </Link>
-          <Link to='/' className="box">
+          <Link to='/login' className="box">
             <HiOutlineUser className='icon' />
             <span>Login/Register</span>
           </Link>
