@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import ProductsList from "./components/ProductsList/ProductsList";
 import About from "./pages/About/About";
+import Cart from "./pages/Cart/Cart";
 import Home from "./pages/Home/Home";
 import LogIn from "./pages/LogIn/LogIn";
 import Register from "./pages/Register/Register";
@@ -37,6 +38,10 @@ const App = () => {
         {
           path: "products/:productId",
           element: <ProductDetails />,
+        },
+        {
+          path: "cart",
+          element: <Cart />,
         },
       ],
     },

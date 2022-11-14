@@ -51,7 +51,7 @@ const Header = () => {
             <HiOutlineUser className='icon' />
             <span>Login/Register</span>
           </Link>
-          <Link to='/' className="box">
+          <Link to='/cart' className="box">
             <BsHandbag className='icon' />
             <p className="label">0</p>
             <span>Bag</span>
