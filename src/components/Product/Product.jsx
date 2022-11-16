@@ -1,28 +1,60 @@
 import './Product.scss';
 import { Link } from 'react-router-dom';
-import { AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
-import {RiShoppingCartLine } from 'react-icons/ri';
-import shoe1 from '../../assets/shoes/shoe4.jpg';
+import { CiCircleMinus, CiCirclePlus} from 'react-icons/ci';
+import shoe1 from '../../assets/shoes/shoe6.jpg';
 
 const Product = ({ product }) => {
-  const { _id, name, price, image } = product;
+  const { _id, title, price, img, category, color } = product;
+  console.log(product);
   return (
-    <div className='product'>
 
+    <div className='product'>
       <Link to={`/products/${_id}`}>
         <img src={shoe1} alt="" />
       </Link>
 
-      <div className='info'>
-        <h5>{name}</h5>
-        <div className="icons">
-          <RiShoppingCartLine/>
-        <h5>${price}</h5>
-          {/* <AiOutlineHeart /> */}
-          {/* <AiOutlineShoppingCart /> */}
+      <Link to={`/products/${_id}`} className='title'>{title}</Link>
+
+      <div className='item'>
+        <p>Category</p>
+        <p>{category}</p>
+      </div>
+
+      <div className='item'>
+        <p>Color</p>
+        <span className='color' style={{backgroundColor: `${color}`}}>&nbsp;</span>
+      </div>
+
+      <div className='item'>
+        <p>$ {price}</p>
+        <div className='value'>
+          <CiCircleMinus className='arrow'/>
+          <span>1</span>
+          <CiCirclePlus className='arrow'/>
         </div>
       </div>
+
+      <button>Add to cart</button>
+
     </div>
+    // <div className='product'>
+
+    //   <Link to={`/products/${_id}`}>
+    //     <img src={shoe1} alt="" />
+    //   </Link>
+
+    //   <div className='info'>
+    //   <Link to={`/products/${_id}`}>
+    //     {title}
+    //   </Link>
+
+    //     <div className="icons">
+    //       <RiShoppingCartLine />
+    //       <h5>${price}</h5>
+    //       <AiOutlineHeart />
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 

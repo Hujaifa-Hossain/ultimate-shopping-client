@@ -1,14 +1,13 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import ProductDetails from "./components/ProductDetails/ProductDetails";
-import ProductsList from "./components/ProductsList/ProductsList";
-import About from "./pages/About/About";
-import Cart from "./pages/Cart/Cart";
 import Home from "./pages/Home/Home";
+import Cart from "./pages/Cart/Cart";
 import LogIn from "./pages/LogIn/LogIn";
 import Register from "./pages/Register/Register";
 import Footer from "./shared/Footer/Footer";
 import Header from "./shared/Header/Header";
 import NotFound from "./shared/NotFound/NotFound";
+import ProductsList from "./components/ProductsList/ProductsList";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 
 const App = () => {
   const LayOut = () => {
@@ -46,12 +45,12 @@ const App = () => {
       ],
     },
     {
-      path: 'login',
-      element: <LogIn/>
+      path: "login",
+      element: <LogIn />,
     },
     {
-      path: 'register',
-      element: <Register/>
+      path: "register",
+      element: <Register />,
     },
   ]);
 

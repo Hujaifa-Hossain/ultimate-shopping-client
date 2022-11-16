@@ -60,6 +60,12 @@ const Cart = () => {
         </div>
 
         <p><span style={{fontWeight: 'bold'}}>Note:</span> The shipping charges will be calculated in checkout based on shipping address</p>
+
+        <button>
+          <span>Continue</span>
+          <span className='dot'>.</span>
+          <span>$200</span>
+          </button>
       </div>
 
     </div>

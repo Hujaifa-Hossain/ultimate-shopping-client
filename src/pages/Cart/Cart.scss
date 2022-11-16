@@ -1,6 +1,10 @@
 .cart {
   display: flex;
-  margin: 10px;
+  margin: 0 10px;
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+  }
 
   h5 {
     border-bottom: 0.1px solid #f0f0f0;
@@ -62,7 +66,7 @@
       display: flex;
       text-align: start;
       gap: 10px;
-      padding-left: 50px;
+      padding-left: 20px;
 
       img {
         width: 100px;
@@ -74,9 +78,8 @@
   .right {
     flex: 2;
     padding: 20px;
-    // box-shadow: -10px 10px 10px -5px #d8d8d8bf;
-
     box-shadow: -4px -3px 13px -8px rgb(204 194 204 / 64%);
+    border: 0.1px solid rgb(204 194 204 / 64%);
     
     h6{
       margin-top: 20px;
@@ -96,6 +99,27 @@
       p{
         font-size: 15px;
         font-weight: 600;
+      }
+    }
+
+    button{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 25px 0;
+      padding: 20px;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      .dot{
+        height: 8px;
+        width: 8px;
+        font-size: 0px;
+        background-color: #fff;
+        border-radius: 50%;
       }
     }
   }

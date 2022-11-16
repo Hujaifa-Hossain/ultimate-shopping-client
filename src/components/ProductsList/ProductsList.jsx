@@ -4,7 +4,7 @@ import './ProductsList.scss';
 
 const ProductsList = () => {
 
-  const { data: products, isLoading } = useQuery(['products'], () => fetch('http://localhost:8080/api/product', {
+  const { data: products, isLoading } = useQuery(['products'], () => fetch('http://localhost:8080/api/products', {
     method: 'GET',
   }).then(res => res.json()));
 

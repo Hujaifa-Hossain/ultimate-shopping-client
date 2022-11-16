@@ -9,7 +9,7 @@ const ProductDetails = () => {
   console.log(productId)
 
 
-  const { data: product, isLoading } = useQuery(['products'], () => fetch(`http://localhost:8080/api/product/${productId}`, {
+  const { data: product, isLoading } = useQuery(['products'], () => fetch(`http://localhost:8080/api/products/${productId}`, {
     method: 'GET',
   }).then(res => res.json()));
 
