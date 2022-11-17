@@ -65,13 +65,10 @@ const Header = () => {
       {/* mega menu  */}
       <ul className="mega-menu">
         <li className='nav-link'><Link to='/'>Sale</Link></li>
-        <li className='nav-link mega-link'><Link to='/men'>Men</Link></li>
-        <li className='nav-link mega-link'><Link to='/women'>Women</Link></li>
-
-
-        <li className='nav-link mega-link'><Link to='/kids'>Kids</Link></li>
+        <li className='nav-link mega-link'><Link to='/products'>Men</Link></li>
+        <li className='nav-link mega-link'><Link to='/products'>Women</Link></li>
+        <li className='nav-link mega-link'><Link to='/products'>Kids</Link></li>
         <li className='nav-link'><Link to='/gift'>Gift Voucher</Link></li>
-        {/* <li className='nav-link'><Link to='/exclusive'>Online Exclusive</Link></li> */}
       </ul>
 
     </nav>

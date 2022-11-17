@@ -7,19 +7,19 @@ const Support = () => {
     <div className='support'>
       <div className="support-box">
         <FaShippingFast className='icon'/>
-        <h4>FAST, FREE SHIPPING</h4>
+        <h5>FAST, FREE SHIPPING</h5>
         <p>FREE DELIVERY on All Orders.</p>
       </div>
       
       <div className="support-box">
         <MdOutlineSupportAgent className='icon'/>
-        <h4>CUSTOMER CARE</h4>
+        <h5>CUSTOMER CARE</h5>
         <p>Call: <a href="tel:+8801791158039">+8801791158039</a> <br/> 10:00 am - 7:00 pm (everyday)</p>
       </div>
 
       <div className="support-box">
         <MdChangeCircle className='icon'/>
-        <h4>EXCHANGE FROM ANY STORE</h4>
+        <h5>EXCHANGE FROM ANY STORE</h5>
         <p>You can exchange within 15 days from the date of purchase.</p>
       </div>
     </div>
