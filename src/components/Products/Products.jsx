@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import Slider from "react-slick";
 import './Products.scss'
 import Product from '../Product/Product';
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
+import { IoArrowUndoOutline, IoArrowRedoOutline } from 'react-icons/io5';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../../shared/Loading/Loading';
 
@@ -12,12 +12,7 @@ const Products = () => {
     method: 'GET',
   }).then(res => res.json()));
 
-  console.log(products);
-
-
   const sliderRef = useRef(null);
-
-
 
   const settings = {
     dots: false,
@@ -53,33 +48,6 @@ const Products = () => {
     ]
   };
 
-  // const products = [
-  //   {
-  //     name: 'appex',
-  //     description: 'lorem ipsum dolar sit',
-  //     image: ''
-  //   },
-  //   {
-  //     name: 'appex',
-  //     description: 'lorem ipsum dolar sit',
-  //     image: ''
-  //   },
-  //   {
-  //     name: 'appex',
-  //     description: 'lorem ipsum dolar sit',
-  //     image: ''
-  //   },
-  //   {
-  //     name: 'appex',
-  //     description: 'lorem ipsum dolar sit',
-  //     image: ''
-  //   },
-  //   {
-  //     name: 'appex',
-  //     description: 'lorem ipsum dolar sit',
-  //     image: ''
-  //   },
-  // ]
   return (
     <div className='products'>
       <div
@@ -108,7 +76,7 @@ const Products = () => {
             className="buttons"
             onClick={() => sliderRef.current.slickPrev()}
           >
-            <BsArrowLeftCircleFill />
+            <IoArrowUndoOutline />
           </button>
           <button
             style={{
@@ -124,7 +92,7 @@ const Products = () => {
             className="buttons"
             onClick={() => sliderRef.current.slickNext()}
           >
-            <BsArrowRightCircleFill />
+            <IoArrowRedoOutline />
           </button>
         </div>
       </div>
@@ -145,7 +113,7 @@ const Products = () => {
             </div>
           )}
         >
-          {products?.slice(1, 8).map((product, _id) => <Product key={_id} product={product} />)}
+          {products?.slice(0, 7).map((product, _id) => <Product key={_id} product={product} />)}
         </Slider>
       </div>
     </div>

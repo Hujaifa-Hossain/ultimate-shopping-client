@@ -1,13 +1,21 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Cart from "./pages/Cart/Cart";
-import LogIn from "./pages/LogIn/LogIn";
-import Register from "./pages/Register/Register";
+
+import Loading from "./shared/Loading/Loading";
 import Footer from "./shared/Footer/Footer";
 import Header from "./shared/Header/Header";
-import NotFound from "./shared/NotFound/NotFound";
-import ProductsList from "./components/ProductsList/ProductsList";
-import ProductDetails from "./components/ProductDetails/ProductDetails";
+const Home = lazy(() => import("./pages/Home/Home"));
+const Cart = lazy(() => import("./pages/Cart/Cart"));
+const LogIn = lazy(() => import("./pages/LogIn/LogIn"));
+const Register = lazy(() => import("./pages/Register/Register"));
+
+const ProductsList = lazy(() =>
+  import("./components/ProductsList/ProductsList")
+);
+const ProductDetails = lazy(() =>
+  import("./components/ProductDetails/ProductDetails")
+);
+const NotFound = lazy(() => import("./shared/NotFound/NotFound"));
 
 const App = () => {
   const LayOut = () => {
@@ -52,11 +60,17 @@ const App = () => {
       path: "register",
       element: <Register />,
     },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
   ]);
 
   return (
     <>
-      <RouterProvider router={router} />
+      <Suspense fallback={<Loading />}>
+        <RouterProvider router={router} />
+      </Suspense>
     </>
   );
 };

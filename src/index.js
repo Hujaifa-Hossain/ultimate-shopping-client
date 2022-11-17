@@ -4,6 +4,7 @@ import App from "./App";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./styles/styles.scss";
+import 'react-slideshow-image/dist/styles.css'
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();

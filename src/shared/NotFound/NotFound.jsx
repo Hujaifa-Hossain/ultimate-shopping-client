@@ -5,9 +5,9 @@ const NotFound = () => {
   console.error(error);
 
   return (
-    <div style={{fontSize: '80px', textAlign: 'center'}} id="error-page">
+    <div style={{fontSize: '40px', textAlign: 'center', height: '100vh', margin: 'auto, 10px'}} id="error-page">
       <h1>Oops!</h1>
-      <Link to='/'>Go Back!</Link>
+      <a href='http://localhost:3000/'>Go Back!</a>
     </div>
   );
 };
