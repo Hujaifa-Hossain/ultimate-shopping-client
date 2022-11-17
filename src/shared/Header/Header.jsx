@@ -6,6 +6,7 @@ import { AiOutlineGift } from 'react-icons/ai';
 import { FiMapPin } from 'react-icons/fi';
 import { HiOutlineUser } from 'react-icons/hi';
 import { BsHandbag } from 'react-icons/bs';
+import logo from '../../assets/common/logo.jpg';
 
 const Header = () => {
 
@@ -31,9 +32,11 @@ const Header = () => {
 
       {/* real header  */}
       <div className="header-real">
-        <Link to='/' className="logo">
-          ShopKeeper
-        </Link>
+        <div className="logo">
+          <Link to='/'>
+            <img src={logo} alt="" />
+          </Link>
+        </div>
         <div className="search">
           <input type="text" />
           <BiSearchAlt className="icon" />

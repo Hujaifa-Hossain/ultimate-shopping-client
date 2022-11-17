@@ -1,13 +1,22 @@
 .category{
   padding: 10px;
-  height: 300px;
-  border-radius: 10px;
-  opacity: 0.9;
+  // position: relative;
+  
   &:hover{
     transform: scale(1.03);
     transition: transform .5s;
   }
+
+  img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+  }
+
   button{
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: black;
     color: white;
     text-transform: uppercase;

@@ -1,11 +1,12 @@
+import { IoHome } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-import wall from '../../assets/common/wall.jpg';
 import wood from '../../assets/common/wood.jpg';
 import './LogIn.scss';
 
 const LogIn = () => {
 	return (
 		<div className="login" style={{backgroundImage: `url(${wood})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+			<span><Link to='/'><IoHome/></Link></span>
 			<form action="" className='login-form'>
 				<h4>Welcome back!</h4>
 				<input type="email" placeholder='Your Email' />

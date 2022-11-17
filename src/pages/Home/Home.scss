@@ -1,19 +1,14 @@
 .home {
   .home-banner {
     width: 100%;
-    margin: 10px auto;
-
+    
     img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
+      height: 600px;
     }
 
     @media (max-width: 780px) {
       img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
+        height: 400px;
       }
     }
   }
@@ -21,7 +16,8 @@
   .fashion-grid {
     display: flex;
     gap: 10px;
-    margin: 50px 20px;
+    width: 90%;
+    margin: 50px auto;
     @media (max-width: 780px) {
       flex-direction: column;
     }

@@ -4,10 +4,11 @@ import './Category.scss';
 const Category = ({ category }) => {
   const { link, img } = category;
   return (
-    <Link to={link} className='category'
-      style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', }}>
-
-      <button>shop now</button>
+    <Link to={link} className='category'>
+      <div>
+        <img src={img} alt="" />
+        <button>shop now</button>
+      </div>
     </Link>
   );
 };

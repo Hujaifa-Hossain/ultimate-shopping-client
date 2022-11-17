@@ -2,16 +2,19 @@ import './Home.scss';
 import Slider from "react-slick";
 import Products from '../../components/Products/Products';
 import Categories from '../../components/Categories/Categories';
+import Support from '../../components/support/Support';
+
+import banner1 from '../../assets/common/banner1.jpg';
+import banner2 from '../../assets/common/banner2.jpg';
 
 import shoe4 from '../../assets/shoes/shoe4.jpg';
 import shoe5 from '../../assets/shoes/shoe5.jpg';
 import shoe8 from '../../assets/shoes/shoe8.jpg';
 import shoe7 from '../../assets/shoes/shoe7.jpg';
-import Support from '../../components/support/Support';
 
 const Home = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -20,34 +23,42 @@ const Home = () => {
   };
   return (
     <div className='home'>
+
+      {/* HOME BANNER  */}
+
       <Slider {...settings} className='home-banner'>
-        <div>
-          <img src="https://storage.sg.content-cdn.io/in-resources/25c7d1c6-73be-4ff9-b000-0bf110b5c461/Images/userimages/banners/oct2022/fashion_week_hm_d2210.jpg" alt="" />
-        </div>
-        <div>
-          <img src="https://storage.sg.content-cdn.io/in-resources/25c7d1c6-73be-4ff9-b000-0bf110b5c461/Images/userimages/banners/sept2022/sustainable_shoes_hmbanr_d0809.jpg" alt="" />
-        </div>
-        <div>
-          <img src="https://storage.sg.content-cdn.io/in-resources/25c7d1c6-73be-4ff9-b000-0bf110b5c461/Images/userimages/banners/oct2022/home_banr_03_d2010.jpg" alt="" />
-        </div>
+        <img src={banner1} alt="Banner one" />
+        <img src={banner2} alt="Banner two" />
       </Slider>
-      <Categories/>
+
+      {/* CATEGORIES  */}
+      <Categories />
+
+      {/* PRODUCTS  */}
       <Products />
 
+      {/* FASHION GALLERY  */}
       <section className='fashion-grid'>
         <div className='left'>
           <img src={shoe4} alt="" />
         </div>
         <div className='right'>
-          <div><img src={shoe8} alt="" /></div>
+          <div>
+            <img src={shoe8} alt="" />
+          </div>
           <div className='item'>
-            <div><img src={shoe5} alt="" /></div>
-            <div><img src={shoe7} alt="" /></div>
+            <div>
+              <img src={shoe5} alt="" />
+            </div>
+            <div>
+              <img src={shoe7} alt="" />
+            </div>
           </div>
         </div>
       </section>
 
-      <Support/>
+      {/* SUPPORT CALL TO ACTION */}
+      <Support />
 
     </div>
   );

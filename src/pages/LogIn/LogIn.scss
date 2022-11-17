@@ -1,10 +1,29 @@
-.login{
+.login {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .login-form{
+  span {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    background-color: white;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .login-form {
     gap: 15px;
     display: flex;
     justify-content: center;
@@ -14,15 +33,15 @@
     text-align: center;
     background-color: white;
     width: 350px;
-    input{
+    input {
       padding: 5px 10px;
       font-size: 18px;
     }
-    .submit{
+    .submit {
       background-color: black;
       color: white;
     }
-    p{
+    p {
       font-size: 16px;
     }
   }

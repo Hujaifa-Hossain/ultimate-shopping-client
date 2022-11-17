@@ -23,12 +23,9 @@
 
     .logo {
       flex: 1;
-      font-size: 36px;
-      font-weight: 700;
-      color: #fe0249e9;
-      font-family: serif;
-      text-decoration: none;
-      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
     }
     .search {
       display: flex;
