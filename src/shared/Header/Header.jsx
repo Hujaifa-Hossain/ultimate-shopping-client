@@ -21,7 +21,7 @@ const Header = () => {
     cssEase: "linear",
   };
 
-  const offers = ['SALE: UP TO 50% OFF ON SELECTED STYLES', 'ENJOY FREE DELIVERY ON ALL ORDERS', 'GET APEX GIFT VOUCHER AT FLAT 25% OFF']
+  const offers = ['SALE: UP TO 50% OFF ON SELECTED STYLES', 'ENJOY FREE DELIVERY ON ALL ORDERS', 'GET ULTIMATE GIFT VOUCHER AT FLAT 25% OFF']
 
   return (
     <nav className='header'>
@@ -37,12 +37,14 @@ const Header = () => {
             <img src={logo} alt="" />
           </Link>
         </div>
+
         <div className="search">
           <input type="text" />
           <BiSearchAlt className="icon" />
         </div>
+
         <div className="icon-boxes">
-          <Link to='/' className="box">
+          <Link to='gift' className="box">
             <AiOutlineGift className='icon' />
             <span>Ultimate Rewards</span>
           </Link>
@@ -50,11 +52,11 @@ const Header = () => {
             <FiMapPin className='icon' />
             <span>Store Locations</span>
           </Link>
-          <Link to='/login' className="box">
+          <Link to='login' className="box">
             <HiOutlineUser className='icon' />
             <span>Login/Register</span>
           </Link>
-          <Link to='/cart' className="box">
+          <Link to='cart' className="box">
             <BsHandbag className='icon' />
             <p className="label">0</p>
             <span>Bag</span>

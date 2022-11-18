@@ -1,6 +1,9 @@
 .category{
   padding: 10px;
-  // position: relative;
+  
+  @media (max-width: 780px) {
+    position: relative;
+  }
   
   &:hover{
     transform: scale(1.03);

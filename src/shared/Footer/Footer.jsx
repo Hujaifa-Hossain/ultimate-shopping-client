@@ -11,18 +11,20 @@ const Footer = () => {
     <footer className='footer'>
       <div className="footer-main">
         <div className="logo-box">
+          <Link to='/'>
           <img src={footer} alt="" />
+          </Link>
           <div className="social">
-            <a href='https://github.com/Hujaifa-Hossain' target='_blank'>
+            <a href='https://github.com/Hujaifa-Hossain' target='_blank' rel="noreferrer">
               <FaGithub />
             </a>
-            <a href='https://linkedin.com/in/Hujaifa-Hossain' target='_blank'>
+            <a href='https://linkedin.com/in/Hujaifa-Hossain' target='_blank' rel="noreferrer">
               <FaLinkedin />
             </a>
             <a href='mailto:hujaifa.webdev@gmail.com'>
               <MdAttachEmail />
             </a>
-            <a href='https://hujaifa-hossain-portfolio.netlify.app' target='_blank'>
+            <a href='https://hujaifa-hossain-portfolio.netlify.app' target='_blank' rel="noreferrer">
               <FaUserTie />
             </a>
           </div>

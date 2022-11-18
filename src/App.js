@@ -8,6 +8,7 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const Cart = lazy(() => import("./pages/Cart/Cart"));
 const LogIn = lazy(() => import("./pages/LogIn/LogIn"));
 const Register = lazy(() => import("./pages/Register/Register"));
+const Gift = lazy(() => import('./pages/Gift/Gift'));
 
 const ProductsList = lazy(() =>
   import("./components/ProductsList/ProductsList")
@@ -49,6 +50,10 @@ const App = () => {
         {
           path: "cart",
           element: <Cart />,
+        },
+        {
+          path: "gift",
+          element: <Gift />,
         },
       ],
     },
