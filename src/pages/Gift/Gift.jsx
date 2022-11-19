@@ -1,24 +1,42 @@
 import './Gift.scss';
-import { Zoom } from 'react-slideshow-image';
+import { slide as Menu } from 'react-burger-menu'
+import ImageGallery from 'react-image-gallery';
+import shoe1 from '../../assets/shoes/shoe1.jpg';
+import shoe2 from '../../assets/shoes/shoe2.jpg';
+import shoe3 from '../../assets/shoes/shoe3.jpg';
+
+// const images = [
+//   shoe1,
+//   shoe2,
+//   shoe3
+// ]
+
+const images = [
+  {
+    original: 'https://picsum.photos/id/1018/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+  },
+  {
+    original: 'https://picsum.photos/id/1015/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+  },
+  {
+    original: 'https://picsum.photos/id/1019/1000/600/',
+    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+  },
+];
+
 
 const Gift = () => {
-
-  const images = [
-    "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
-    "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
-  ];
-  const indicators = 1
   return (
-    <div className="gift">
-      <Zoom indicators={indicators} >
-
-        {images?.map(img => <div>
-          <div style={{ 'backgroundImage': `url(${img})`, height: '500px', backgroundRepeat: 'no-repeat'}}>
-            <span>Slide 1</span>
-          </div>
-        </div>)}
-      </Zoom>
+    <div>
+      <Menu >
+        <a id="home" className="menu-item" href="/">Home</a>
+        <a id="about" className="menu-item" href="/about">About</a>
+        <a id="contact" className="menu-item" href="/contact">Contact</a>
+        <a className="menu-item--small" href="">Settings</a>
+      </Menu >
+      <ImageGallery items={images} showFullscreenButton={false}/>
     </div>
   );
 };

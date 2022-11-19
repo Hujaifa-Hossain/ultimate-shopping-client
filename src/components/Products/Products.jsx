@@ -3,14 +3,13 @@ import Slider from "react-slick";
 import './Products.scss'
 import Product from '../Product/Product';
 import { IoArrowUndoOutline, IoArrowRedoOutline } from 'react-icons/io5';
-import { useQuery } from '@tanstack/react-query';
 import Loading from '../../shared/Loading/Loading';
+import { useGetProductsQuery } from '../../redux/apiSlice';
 
 const Products = () => {
 
-  const { data: products, isLoading } = useQuery(['products'], () => fetch('http://localhost:8080/api/products', {
-    method: 'GET',
-  }).then(res => res.json()));
+  const { data: products, error, isLoading } = useGetProductsQuery()
+
 
   const sliderRef = useRef(null);
 
@@ -113,7 +112,7 @@ const Products = () => {
             </div>
           )}
         >
-          {products?.slice(0, 7).map((product, _id) => <Product key={_id} product={product} />)}
+          {products && products?.slice(0, 7).map((product, _id) => <Product key={_id} product={product} />)}
         </Slider>
       </div>
     </div>

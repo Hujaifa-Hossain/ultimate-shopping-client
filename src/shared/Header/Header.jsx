@@ -70,7 +70,7 @@ const Header = () => {
         <li className='nav-link mega-link'><Link to='/products'>Men</Link></li>
         <li className='nav-link mega-link'><Link to='/products'>Women</Link></li>
         <li className='nav-link mega-link'><Link to='/products'>Kids</Link></li>
-        <li className='nav-link'><Link to='/gift'>Gift Voucher</Link></li>
+        <li className='nav-link'><Link to='/gift'>Gifts</Link></li>
       </ul>
 
     </nav>

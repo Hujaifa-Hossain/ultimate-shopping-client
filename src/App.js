@@ -43,10 +43,10 @@ const App = () => {
           path: "/products",
           element: <ProductsList />,
         },
-        {
-          path: "products/:productId",
-          element: <ProductDetails />,
-        },
+        // {
+        //   path: "products/:productId",
+        //   element: <ProductDetails />,
+        // },
         {
           path: "cart",
           element: <Cart />,

@@ -3,12 +3,10 @@ import Product from '../Product/Product';
 import './ProductsList.scss';
 
 const ProductsList = () => {
+  
+  const products = [
 
-  const { data: products, isLoading } = useQuery(['products'], () => fetch('http://localhost:8080/api/products', {
-    method: 'GET',
-  }).then(res => res.json()));
-
-  console.log(products);
+  ]
 
   return (
     <div className="products-list">
@@ -35,7 +33,7 @@ const ProductsList = () => {
         </div>
       </div>
       <div className="products">
-        {products?.map((product) => <Product key={product._id} product={product} />)}
+        { products && products?.map((product) => <Product key={product._id} product={product} />)}
       </div>
     </div>
   );
