@@ -8,8 +8,7 @@ import { useGetProductsQuery } from '../../redux/apiSlice';
 
 const Products = () => {
 
-  const { data: products, error, isLoading } = useGetProductsQuery()
-
+  const { data: products, isLoading } = useGetProductsQuery()
 
   const sliderRef = useRef(null);
 
@@ -46,6 +45,10 @@ const Products = () => {
       },
     ]
   };
+
+  if (isLoading) {
+    return <Loading />
+  }
 
   return (
     <div className='products'>

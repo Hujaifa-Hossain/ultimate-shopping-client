@@ -1,21 +1,31 @@
 import './ProductDetails.scss';
 import Support from '../support/Support';
 import { useParams } from 'react-router-dom';
-import shoe1 from '../../assets/shoes/shoe1.jpg';
-import shoe2 from '../../assets/shoes/shoe2.jpg';
-import { CiCircleMinus, CiCirclePlus } from 'react-icons/ci'
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+// import shoe1 from '../../assets/shoes/shoe1.jpg';
+// import shoe2 from '../../assets/shoes/shoe2.jpg';
 import Rating from 'react-rating';
+import { BsPatchMinus, BsPatchPlus } from 'react-icons/bs';
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import { useGetProductQuery } from '../../redux/apiSlice';
+import Loading from '../../shared/Loading/Loading';
 
 const ProductDetails = () => {
   const { productId } = useParams();
-  
 
-  // const { _id, title, price, color, size, category } = products;
+  const { data: product, isLoading } = useGetProductQuery(`${productId}`)
+  
+  console.log(product);
+
+  if (isLoading) {
+    return <Loading />
+  }
+
+
+  const { _id, title, price, color, size, category } = product;
 
   return (
     <div className='product-details'>
-      {/* <div className="details">
+      <div className="details">
         <div className='left'>
 
         </div>
@@ -33,8 +43,8 @@ const ProductDetails = () => {
               <p>Rating</p>
               <Rating
                 initialRating={3}
-                emptySymbol={<AiOutlineStar/>}
-                fullSymbol={<AiFillStar/>}
+                emptySymbol={<AiOutlineStar />}
+                fullSymbol={<AiFillStar />}
                 readonly
               />
             </div>
@@ -52,9 +62,9 @@ const ProductDetails = () => {
             <div className='item'>
               <p>$ {price}</p>
               <div className='value'>
-                <CiCircleMinus className='arrow' />
+                <BsPatchMinus className='arrow' />
                 <span>1</span>
-                <CiCirclePlus className='arrow' />
+                <BsPatchPlus className='arrow' />
               </div>
             </div>
 
@@ -62,7 +72,7 @@ const ProductDetails = () => {
           </div>
 
         </div>
-      </div> */}
+      </div>
 
       <Support />
     </div>

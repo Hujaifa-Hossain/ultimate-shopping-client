@@ -1,12 +1,15 @@
-import { useQuery } from '@tanstack/react-query';
+import { useGetProductsQuery } from '../../redux/apiSlice';
+import Loading from '../../shared/Loading/Loading';
 import Product from '../Product/Product';
 import './ProductsList.scss';
 
 const ProductsList = () => {
   
-  const products = [
+  const { data: products, isLoading } = useGetProductsQuery()
 
-  ]
+  if (isLoading) {
+    <Loading />
+  }
 
   return (
     <div className="products-list">

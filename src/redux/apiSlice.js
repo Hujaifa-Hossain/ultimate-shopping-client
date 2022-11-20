@@ -1,4 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+// import { useParams } from "react-router-dom";
+
+// const {productId} = useParams()
 
 export const ultimateApi = createApi({
   reducerPath: "ultimate",
@@ -7,10 +10,16 @@ export const ultimateApi = createApi({
     getProducts: builder.query({
       query: () => ({
         url: "products",
-        method: "Get",
+        method: "GET",
+      }),
+    }),
+    getProduct: builder.query({
+      query: (_id) => ({
+        url: `products/${_id}`,
+        method: "GET",
       }),
     }),
   }),
 });
 
-export const { useGetProductsQuery } = ultimateApi;
+export const { useGetProductsQuery, useGetProductQuery } = ultimateApi;

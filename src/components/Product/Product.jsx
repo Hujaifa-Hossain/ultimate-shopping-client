@@ -1,11 +1,11 @@
 import './Product.scss';
 import { Link } from 'react-router-dom';
-import { CiCircleMinus, CiCirclePlus} from 'react-icons/ci';
+import { BsPatchMinus, BsPatchPlus } from 'react-icons/bs';
 import shoe1 from '../../assets/shoes/shoe6.jpg';
 
 const Product = ({ product }) => {
   const { _id, title, price, img, category, color } = product;
-  console.log(product);
+
   return (
 
     <div className='product'>
@@ -22,15 +22,15 @@ const Product = ({ product }) => {
 
       <div className='item'>
         <p>Color</p>
-        <span className='color' style={{backgroundColor: `${color}`}}>&nbsp;</span>
+        <span className='color' style={{ backgroundColor: `${color}` }}>&nbsp;</span>
       </div>
 
       <div className='item'>
         <p>$ {price}</p>
         <div className='value'>
-          <CiCircleMinus className='arrow'/>
+          <BsPatchMinus className='arrow' />
           <span>1</span>
-          <CiCirclePlus className='arrow'/>
+          <BsPatchPlus className='arrow' />
         </div>
       </div>
 
