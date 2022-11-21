@@ -1,8 +1,7 @@
 import './ProductDetails.scss';
 import Support from '../support/Support';
 import { useParams } from 'react-router-dom';
-// import shoe1 from '../../assets/shoes/shoe1.jpg';
-// import shoe2 from '../../assets/shoes/shoe2.jpg';
+import shoe2 from '../../assets/shoes/shoe6.jpg';
 import Rating from 'react-rating';
 import { BsPatchMinus, BsPatchPlus } from 'react-icons/bs';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
@@ -13,8 +12,6 @@ const ProductDetails = () => {
   const { productId } = useParams();
 
   const { data: product, isLoading } = useGetProductQuery(`${productId}`)
-  
-  console.log(product);
 
   if (isLoading) {
     return <Loading />
@@ -27,7 +24,7 @@ const ProductDetails = () => {
     <div className='product-details'>
       <div className="details">
         <div className='left'>
-
+          <img src={shoe2} alt="" />
         </div>
         <div className='right'>
 

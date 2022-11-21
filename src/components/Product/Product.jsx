@@ -37,24 +37,6 @@ const Product = ({ product }) => {
       <button>Add to cart</button>
 
     </div>
-    // <div className='product'>
-
-    //   <Link to={`/products/${_id}`}>
-    //     <img src={shoe1} alt="" />
-    //   </Link>
-
-    //   <div className='info'>
-    //   <Link to={`/products/${_id}`}>
-    //     {title}
-    //   </Link>
-
-    //     <div className="icons">
-    //       <RiShoppingCartLine />
-    //       <h5>${price}</h5>
-    //       <AiOutlineHeart />
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

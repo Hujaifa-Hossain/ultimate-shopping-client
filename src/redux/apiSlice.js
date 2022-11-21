@@ -19,7 +19,13 @@ export const ultimateApi = createApi({
         method: "GET",
       }),
     }),
+    deleteProduct: builder.mutation({
+      query: (_id) => ({
+        url: `products/${_id}`,
+        method: "DELETE",
+      }),
+    }),
   }),
 });
 
-export const { useGetProductsQuery, useGetProductQuery } = ultimateApi;
+export const { useGetProductsQuery, useGetProductQuery, useDeleteProductMutation } = ultimateApi;

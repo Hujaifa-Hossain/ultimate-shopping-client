@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Loading from "./shared/Loading/Loading";
 import Footer from "./shared/Footer/Footer";
 import Header from "./shared/Header/Header";
+import Post from "./admin/post/Post";
+const AllProducts = lazy(() => import("./admin/AllProducts/AllProducts"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const Cart = lazy(() => import("./pages/Cart/Cart"));
 const LogIn = lazy(() => import("./pages/LogIn/LogIn"));
@@ -19,7 +21,17 @@ const ProductDetails = lazy(() =>
 const NotFound = lazy(() => import("./shared/NotFound/NotFound"));
 
 const App = () => {
-  const LayOut = () => {
+  const User = () => {
+    return (
+      <>
+        <Header />
+        <Outlet />
+        <Footer />
+      </>
+    );
+  };
+
+  const Admin = () => {
     return (
       <>
         <Header />
@@ -32,7 +44,7 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <LayOut />,
+      element: <User />,
       errorElement: <NotFound />,
       children: [
         {
@@ -55,8 +67,29 @@ const App = () => {
           path: "gift",
           element: <Gift />,
         },
+        {
+          path: "post",
+          element: <Post />,
+        },
       ],
     },
+
+    {
+      path: "/admin",
+      element: <Admin />,
+      errorElement: <NotFound />,
+      children: [
+        {
+          path: "post-product",
+          element: <Post />,
+        },
+        {
+          path: "all-products",
+          element: <AllProducts />,
+        },
+      ],
+    },
+
     {
       path: "login",
       element: <LogIn />,

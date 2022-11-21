@@ -6,6 +6,7 @@ import Support from '../../components/support/Support';
 
 import banner1 from '../../assets/common/banner1.jpg';
 import banner2 from '../../assets/common/banner2.jpg';
+import banner3 from '../../assets/common/banner3.jpg';
 
 import shoe4 from '../../assets/shoes/shoe4.jpg';
 import shoe5 from '../../assets/shoes/shoe5.jpg';
@@ -29,6 +30,7 @@ const Home = () => {
       <Slider {...settings} className='home-banner'>
         <img src={banner1} alt="Banner one" />
         <img src={banner2} alt="Banner two" />
+        <img src={banner3} alt="Banner three" />
       </Slider>
 
       {/* CATEGORIES  */}

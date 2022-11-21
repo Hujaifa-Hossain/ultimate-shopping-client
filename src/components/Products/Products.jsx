@@ -8,7 +8,7 @@ import { useGetProductsQuery } from '../../redux/apiSlice';
 
 const Products = () => {
 
-  const { data: products, isLoading } = useGetProductsQuery()
+  const { data: products, isLoading } = useGetProductsQuery();
 
   const sliderRef = useRef(null);
 
@@ -115,7 +115,7 @@ const Products = () => {
             </div>
           )}
         >
-          {products && products?.slice(0, 7).map((product, _id) => <Product key={_id} product={product} />)}
+          {products && products?.slice(0, 8).map((product, _id) => <Product key={_id} product={product} />)}
         </Slider>
       </div>
     </div>
