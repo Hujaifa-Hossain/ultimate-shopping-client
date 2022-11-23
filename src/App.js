@@ -6,6 +6,7 @@ import Footer from "./shared/Footer/Footer";
 import Header from "./shared/Header/Header";
 import Post from "./admin/post/Post";
 const AllProducts = lazy(() => import("./admin/AllProducts/AllProducts"));
+const AllUsers = lazy(() => import("./admin/AllUsers/AllUsers"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const Cart = lazy(() => import("./pages/Cart/Cart"));
 const LogIn = lazy(() => import("./pages/LogIn/LogIn"));
@@ -80,12 +81,16 @@ const App = () => {
       errorElement: <NotFound />,
       children: [
         {
-          path: "post-product",
+          path: "products/post",
           element: <Post />,
         },
         {
-          path: "all-products",
+          path: "products/all",
           element: <AllProducts />,
+        },
+        {
+          path: "users/all",
+          element: <AllUsers />,
         },
       ],
     },

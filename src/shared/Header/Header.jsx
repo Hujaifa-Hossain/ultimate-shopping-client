@@ -58,7 +58,7 @@ const Header = () => {
           </Link>
           <Link to='cart' className="box">
             <BsHandbag className='icon' />
-            <p className="label">0</p>
+            <p className="label">1</p>
             <span>Bag</span>
           </Link>
         </div>

@@ -16,24 +16,24 @@ const AllProducts = () => {
   }
 
   return (
-    <div className='AllProducts'>
+    <div className='all-products'>
       <table className='products-table'>
         <thead>
           <tr>
-            <th>Image</th>
+            <th>Products</th>
             <th>Title</th>
             <th>Actions</th>
           </tr>
         </thead>
 
         <tbody>
-          
+
           {products?.map((product) => <tr key={product?._id}>
             <td><img src={shoe6} alt="" /></td>
             <td>{product?.title}</td>
-            <td className='actions'>
-              <AiFillEdit />
-              <MdDelete onClick={() => { deletePost(product?._id) }} />
+            <td>
+              <AiFillEdit className='update' />
+              <MdDelete className='delete' onClick={() => { deletePost(product?._id) }} />
             </td>
           </tr>)}
 

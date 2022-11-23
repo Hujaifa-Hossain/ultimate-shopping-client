@@ -1,3 +1,18 @@
-.post{
-  margin: 10px;
+.post {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .post-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    input{
+      display: block;
+      padding: 10px;
+      // margin: 10px;
+    }
+  }
 }
