@@ -18,7 +18,7 @@ const ProductDetails = () => {
   }
 
 
-  const { _id, title, price, color, size, category } = product;
+  const { _id, title, price, color, size, category, description } = product;
 
   return (
     <div className='product-details'>
@@ -66,7 +66,12 @@ const ProductDetails = () => {
             </div>
 
             <button>Add to cart</button>
+
           </div>
+            <div className='item'>
+              <p>Description</p>
+              <p>{description}</p>
+            </div>
 
         </div>
       </div>

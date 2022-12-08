@@ -1,7 +1,7 @@
 .home {
   .home-banner {
     width: 100%;
-    
+
     img {
       height: 600px;
     }
@@ -15,11 +15,12 @@
 
   .fashion-grid {
     display: flex;
-    gap: 10px;
-    width: 90%;
+    gap: 5px;
+    // width: 90%;
     margin: 50px auto;
     @media (max-width: 780px) {
       flex-direction: column;
+      gap: 0px;
     }
 
     .left {
@@ -47,6 +48,45 @@
             width: 100%;
           }
         }
+      }
+    }
+  }
+
+  .newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.292);
+
+    @media (max-width: 780px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    p {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .join {
+      input {
+        padding: 8px;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      button {
+        padding: 8px;
+        border: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
       }
     }
   }

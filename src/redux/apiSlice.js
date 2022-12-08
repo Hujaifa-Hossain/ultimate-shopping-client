@@ -5,7 +5,6 @@ export const ultimateApi = createApi({
   tagTypes: ["products", "users"],
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080/api/" }),
   endpoints: (builder) => ({
-
     // GET ALL PRODUCTS
     getProducts: builder.query({
       query: () => ({
@@ -45,15 +44,6 @@ export const ultimateApi = createApi({
       invalidatesTags: ["products"],
     }),
 
-    // GET ALL USERS
-    getUsers: builder.query({
-      query: () => ({
-        url: "users",
-        method: "GET",
-      }),
-      providesTags: ["users"],
-    }),
-
     // REGISTER
     createUser: builder.mutation({
       query: (post) => ({
@@ -79,6 +69,23 @@ export const ultimateApi = createApi({
       }),
       invalidatesTags: ["users"],
     }),
+
+    // GET ALL USERS
+    getUsers: builder.query({
+      query: () => ({
+        url: "users",
+        method: "GET",
+      }),
+      providesTags: ["users"],
+    }),
+
+    // GET A USER
+    getUser: builder.query({
+      query: (id) => ({
+        url: `users/${id}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
@@ -87,8 +94,8 @@ export const {
   useGetProductQuery,
   useCreateProductMutation,
   useDeleteProductMutation,
-  useGetUsersQuery,
   useCreateUserMutation,
   useLoginUserMutation,
-
+  useGetUsersQuery,
+  useGetUserQuery,
 } = ultimateApi;

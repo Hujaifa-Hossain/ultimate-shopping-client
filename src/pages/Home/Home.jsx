@@ -62,6 +62,15 @@ const Home = () => {
       {/* SUPPORT CALL TO ACTION */}
       <Support />
 
+      {/* NEWSLETTER */}
+      <div className="newsletter">
+        <p>Be in touch with us</p>
+        <form className="join">
+        <input type="email" placeholder='Enter your email'/>
+          <button type="submit">join us</button>
+        </form>
+      </div>
+
     </div>
   );
 };

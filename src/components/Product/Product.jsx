@@ -1,24 +1,31 @@
 import './Product.scss';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BsPatchMinus, BsPatchPlus } from 'react-icons/bs';
 import shoe1 from '../../assets/shoes/shoe6.jpg';
-import { useState } from 'react';
+
+import { addProduct } from '../../redux/cartSlice';
+import { useDispatch } from 'react-redux';
 
 const Product = ({ product }) => {
   const { _id, title, price, img, category, color } = product;
 
-  let [cart, setCart] = useState(0);
+  const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1);
 
-  const increase = () => {
-    setCart(cart + 1)
-  }
-  const decrease = () => {
-    if (cart > 0) {
-      setCart(cart - 1)
-    } else {
-      setCart(cart = 0)
-    }
-  }
+  const handleQuantity = (type) => {
+    if (type === "dec") {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else if(quantity <= 2) {
+      setQuantity(quantity +1)
+    } 
+  };
+
+  const handleClick = () => {
+    dispatch(
+      addProduct({ ...product })
+    );
+  };
 
   return (
 
@@ -42,13 +49,13 @@ const Product = ({ product }) => {
       <div className='item'>
         <p>$ {price}</p>
         <div className='value'>
-          <BsPatchMinus onClick={decrease} className='arrow' />
-          <span>{cart}</span>
-          <BsPatchPlus onClick={increase} className='arrow' />
+          <BsPatchMinus  onClick={() => handleQuantity("dec")} className='arrow' />
+          <span>{quantity}</span>
+          <BsPatchPlus onClick={() => handleQuantity("inc")} className='arrow' />
         </div>
       </div>
 
-      <button>Add to cart</button>
+      <button onClick={handleClick}>Add to cart</button>
 
     </div>
   );

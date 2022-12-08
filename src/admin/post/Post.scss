@@ -1,11 +1,11 @@
 .post {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   .post-form {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     flex-direction: column;
     gap: 10px;
 

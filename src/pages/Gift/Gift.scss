@@ -1,3 +1,11 @@
-.gift{
+.gift {
   padding: 10px;
+  .drop{
+    position: relative;
+    ul{
+      position: absolute;
+      background-color: red;
+      visibility: hidden;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 import { IoHome } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import wood from '../../assets/common/wood.jpg';
 import { GiTargetShot } from 'react-icons/gi';
 import './LogIn.scss';
@@ -7,6 +7,8 @@ import { useForm } from "react-hook-form";
 import { useLoginUserMutation } from '../../redux/apiSlice';
 
 const LogIn = () => {
+
+	const navigate = useNavigate();
 
 	const [create] = useLoginUserMutation();
 
@@ -16,6 +18,7 @@ const LogIn = () => {
 		console.log(data)
 		create(data)
 		reset()
+		navigate('/')
 	}
 
 	return (
@@ -29,7 +32,7 @@ const LogIn = () => {
 				<input type='email' placeholder='Your Email' {...register("email", { required: true })} />
 
 				<input type="password" placeholder='Your Password' {...register("password", { required: true })} />
-				
+
 				<input className='submit' type="submit" value='Log In' />
 				<p>New here? <Link to='/register'>Sign Up</Link></p>
 			</form>

@@ -15,48 +15,43 @@
     flex: 4;
     margin: 10px;
 
-    table{
+    table {
       width: 100%;
       text-align: center;
 
-      tr{
-
-        th{
+      tr {
+        th {
           font-size: 16px;
           font-weight: 700;
           padding: 10px 0;
           border-bottom: 1px solid #f0f0f0;
         }
 
-        td{
+        td {
           border-bottom: 1px solid #f0f0f0;
           padding: 20px 0;
-          p{
+          p {
             font-size: 14px;
             font-weight: 500;
           }
+
+          .close {
+            cursor: pointer;
+          }
         }
 
-        .quantity{
+        .quantity {
           text-align: center;
           align-content: center;
 
-          .add, .remove{
-            background-color: #fff;
-            height: 30px;
-            width: 40px;
-            border: none;
-            border: 1px solid;
-            cursor: pointer;
-          }
-
-          .value{
-            border: none;
-            background-color: #fff;
-            height: 30px;
-            width: 50px;
-            border-top: 1px solid;
-            border-bottom: 1px solid;
+          .value {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            .arrow {
+              cursor: pointer;
+            }
           }
         }
       }
@@ -80,29 +75,29 @@
     padding: 20px;
     box-shadow: -4px -3px 13px -8px rgb(204 194 204 / 64%);
     border: 0.1px solid rgb(204 194 204 / 64%);
-    
-    h6{
+
+    h6 {
       margin-top: 20px;
       margin-bottom: 15px;
     }
 
-    p{
+    p {
       font-size: 18px;
       margin: 10px 0;
     }
 
-    .item{
+    .item {
       display: flex;
       justify-content: space-between;
       align-content: center;
       margin: 10px 0;
-      p{
+      p {
         font-size: 15px;
         font-weight: 600;
       }
     }
 
-    button{
+    button {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -114,7 +109,7 @@
       cursor: pointer;
       font-size: 16px;
       font-weight: 700;
-      .dot{
+      .dot {
         height: 8px;
         width: 8px;
         font-size: 0px;
@@ -123,4 +118,11 @@
       }
     }
   }
+}
+
+
+.empty{
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
 }

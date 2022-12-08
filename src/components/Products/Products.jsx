@@ -61,7 +61,7 @@ const Products = () => {
           marginTop: '10px',
         }}
       >
-        <h4>What's New</h4>
+        <h5>What's New</h5>
         <div style={{ display: "flex" }}>
           <button
             style={{
@@ -108,7 +108,6 @@ const Products = () => {
                 position: "absolute",
                 width: "100%",
                 top: "-10px",
-                // opacity: 0,
               }}
             >
               {i}
@@ -119,7 +118,6 @@ const Products = () => {
         </Slider>
       </div>
     </div>
-
 
   );
 };

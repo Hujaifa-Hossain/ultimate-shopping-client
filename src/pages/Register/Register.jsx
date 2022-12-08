@@ -1,12 +1,13 @@
 import './Register.scss';
 import { IoHome } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import wood from '../../assets/common/wood.jpg';
 import { useCreateUserMutation } from '../../redux/apiSlice';
 
 const Register = () => {
-
+	const navigate = useNavigate();
+	
 	const [create] = useCreateUserMutation();
 
 	const { register, handleSubmit, reset } = useForm();
@@ -15,6 +16,7 @@ const Register = () => {
 		console.log(data)
 		create(data)
 		reset()
+		navigate('/login')
 	}
 
 	return (
